@@ -43,7 +43,7 @@ const ReviewCard = ({
         </div>
         <div>
           <p className="text-white">{review}</p>
-          <audio controls className="mt-5">
+          <audio controls className="mt-5 ">
             <source src={audio} type="audio/mpeg" />
           </audio>
         </div>

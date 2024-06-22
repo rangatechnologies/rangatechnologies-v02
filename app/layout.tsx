@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Premier Blockchain Solutions",
   description:
-    "Cutting-Edge Blockchain Technology.Secure. Scalable. Revolutionary.",
+    "Cutting-Edge Blockchain Technology. Secure. Scalable. Revolutionary.",
 };
 
 export default function RootLayout({
@@ -19,10 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex h-screen flex-col`}>
-        <Header />
-        <div className="flex-1 bg-[#020000]">{children}</div>
-        <Footer />
+      <body className={`${inter.className} flex min-h-screen flex-col`}>
+          <Header />
+        <main className="flex-1 bg-[#020000]">{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

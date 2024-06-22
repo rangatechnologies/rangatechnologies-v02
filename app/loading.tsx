@@ -1,9 +1,22 @@
 import React from "react";
+import { Skeleton } from "@/components/ui/skeleton";
+import Image from "next/image";
 
 const loading = () => {
   return (
-    <div className="flex h-screen w-full items-center justify-center">
-      <div className="size-20 animate-spin rounded-full border-8 border-gray-300 border-t-blue-600" />
+    <div className="mx-auto mt-40 flex w-full items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-4">
+        <h2 className="bg-gradient-to-r from-[#D243FA] to-[#542CB1] bg-clip-text text-center  text-[50px] font-extrabold text-transparent sm:text-[80px]">
+          Rangha Tecnologies
+        </h2>
+        <Image
+          src="/assets/images/spinner1.png"
+          alt="loading"
+          width={300}
+          height={300}
+          className="animate-spin"
+        />
+      </div>
     </div>
   );
 };

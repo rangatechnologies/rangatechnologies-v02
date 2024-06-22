@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import BlogCards from "../BlogCards";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const BlogsItem = ({ blogs }: any) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [moreBlogs, setMoreBlogs] = useState(8);
 
   const categories = [
     "All",
@@ -14,7 +16,6 @@ const BlogsItem = ({ blogs }: any) => {
     "Crypto",
     "Future",
     "Mining",
-    "Trending",
   ];
 
   const filteredArticles =
@@ -39,9 +40,9 @@ const BlogsItem = ({ blogs }: any) => {
       </div>
       <div className="grid flex-1 gap-x-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredArticles.length > 0 ? (
-          filteredArticles?.map((item: any) => (
-            <BlogCards key={item.id} item={item} />
-          ))
+          filteredArticles
+            ?.slice(0, moreBlogs)
+            .map((item: any) => <BlogCards key={item.id} item={item} />)
         ) : (
           <div className="col-span-4 flex h-[80vh] flex-col items-center justify-center">
             <h4 className="text-center text-3xl text-white">No data found</h4>
@@ -56,6 +57,14 @@ const BlogsItem = ({ blogs }: any) => {
             </Link>
           </div>
         )}
+      </div>
+      <div className="mt-10 flex justify-center">
+        <Button
+          onClick={() => setMoreBlogs(moreBlogs + 4)}
+          className="bg-blue-600 p-2 hover:bg-blue-500"
+        >
+          Load More
+        </Button>
       </div>
     </div>
   );

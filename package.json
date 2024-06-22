@@ -28,6 +28,7 @@
     "react-fast-marquee": "^1.6.4",
     "react-h5-audio-player": "^3.9.1",
     "react-hook-form": "^7.51.5",
+    "react-markdown": "^9.0.1",
     "react-marquee-slider": "^1.1.5",
     "react-social-icons": "^6.16.0",
     "tailwind-merge": "^2.3.0",

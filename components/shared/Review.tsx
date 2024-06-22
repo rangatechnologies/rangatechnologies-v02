@@ -66,7 +66,7 @@ const Review = () => {
         <p className="text-left text-[22px] font-light text-white sm:text-[32px]">
           What Our Clients Say
         </p>
-        <Marquee pauseOnClick pauseOnHover >
+        <Marquee pauseOnClick pauseOnHover speed={50}>
           <div className="mt-10 flex">
             {tempReviews.map((item) => (
               <ReviewCard key={item._id} {...item} />

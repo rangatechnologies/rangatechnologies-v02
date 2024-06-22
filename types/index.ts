@@ -3,7 +3,6 @@ export interface BlogTypesProps {
   attributes: {
     Title: string;
     Description: string;
-    Featured: boolean;
     createdAt: string;
     updatedAt: string;
     publishedAt: string;

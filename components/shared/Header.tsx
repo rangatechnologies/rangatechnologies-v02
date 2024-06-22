@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-50 bg-[#020000]">
-      <nav className="mx-auto flex max-w-7xl items-center justify-around  px-5 py-3 md:px-10">
+      <nav className="mx-auto flex max-w-7xl  items-center justify-around px-5 py-3 md:px-10">
         <div className="flex-1">
           <Link href="/">
             <Image
@@ -38,7 +38,7 @@ const Header = () => {
             })}
           </ul>
           <Button className="h-8 rounded-full !bg-[#5663FA] hover:!bg-[#1120cc]">
-            Lanunch App
+            Launch App
           </Button>
           <MobileNav />
         </div>
