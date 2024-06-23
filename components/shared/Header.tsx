@@ -43,7 +43,7 @@ const Header = () => {
               <li>
                 <Link href="https://t.me/+nlYbb3cJ3OQ3Njdl">
                   <Image
-                    src={"/assets/images/telegram.png"}
+                    src="/assets/images/telegram.png"
                     alt="telegram-icon"
                     width={40}
                     height={40}
@@ -53,7 +53,7 @@ const Header = () => {
               <li>
                 <Link href="https://www.youtube.com/@DEXVolumeBots">
                   <Image
-                    src={"/assets/images/youtube.png"}
+                    src="/assets/images/Youtube.png"
                     alt="youtube-icon"
                     width={40}
                     height={40}
@@ -63,7 +63,7 @@ const Header = () => {
               <li>
                 <Link href="https://wa.me/message/XEABYADPSDL2D1">
                   <Image
-                    src={"/assets/images/Whatsapp.png"}
+                    src={"/assets/images/WhatsApp.png"}
                     alt="twitter-icon"
                     width={40}
                     height={40}
