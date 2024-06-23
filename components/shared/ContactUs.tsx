@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 
 const ContactUs = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -102,14 +103,21 @@ const ContactUs = () => {
                 />
                 <Button
                   type="submit"
-                  className="!mt-10 flex rounded-full bg-[#5663FA] px-10"
+                  className="!mt-10 flex rounded-full bg-gradient-to-r from-[#D243FA] to-[#542CB1] px-10 hover:bg-gradient-to-l"
                 >
                   Submit
                 </Button>
               </form>
             </Form>
           </div>
-          <div className="gooey mx-auto hidden !size-[400px] !max-h-[300px] items-center justify-center sm:flex"></div>
+          {/* <div className="gooey mx-auto hidden !size-[400px] !max-h-[300px] items-center justify-center sm:flex"></div> */}
+          <Image
+            src="/assets/images/heroimg.png"
+            alt="hero"
+            width={800}
+            height={800}
+            className="mx-auto hidden !size-[400px] !max-h-[300px] items-center justify-center sm:flex"
+          />
         </div>
       </div>
     </>
