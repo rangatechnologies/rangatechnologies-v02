@@ -63,7 +63,7 @@ const Header = () => {
               <li>
                 <Link href="https://wa.me/message/XEABYADPSDL2D1">
                   <Image
-                    src={"/assets/images/whatsapp.png"}
+                    src={"/assets/images/Whatsapp.png"}
                     alt="twitter-icon"
                     width={40}
                     height={40}
