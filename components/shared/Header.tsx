@@ -39,9 +39,38 @@ const Header = () => {
             })}
           </ul>
           <div className="flex gap-3">
-            <SocialIcon url="https://twitter.com" className="!size-10" />
-            <SocialIcon url="https://whatsapp.com" className="!size-10" />
-            <SocialIcon url="https://telegram.com" className="!size-10" />
+            <ul className="flex gap-5">
+              <li>
+                <Link href="https://t.me/+nlYbb3cJ3OQ3Njdl">
+                  <Image
+                    src={"/assets/images/telegram.png"}
+                    alt="telegram-icon"
+                    width={40}
+                    height={40}
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.youtube.com/@DEXVolumeBots">
+                  <Image
+                    src={"/assets/images/youtube.png"}
+                    alt="youtube-icon"
+                    width={40}
+                    height={40}
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link href="https://wa.me/message/XEABYADPSDL2D1">
+                  <Image
+                    src={"/assets/images/whatsapp.png"}
+                    alt="twitter-icon"
+                    width={40}
+                    height={40}
+                  />
+                </Link>
+              </li>
+            </ul>
           </div>
           <MobileNav />
         </div>

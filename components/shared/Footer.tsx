@@ -10,7 +10,7 @@ const Footer = () => {
         </h2>
         <div className="">
           <p className="text-[20px] font-light text-white sm:text-[32px]">
-            Let&apos;s Taks
+            Let&apos;s Talks
           </p>
           <div className="flex gap-3">
             <SocialIcon network="linkedin" className="!size-8" bgColor="grey" />
