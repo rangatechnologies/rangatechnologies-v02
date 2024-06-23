@@ -40,7 +40,7 @@ const BannerWallet = ({ setShowRecipt, showrecipt }: any) => {
       <div className={`${showrecipt ? "" : "hidden"}`}>
         <div>
           <h2 className="text-[30px] font-medium text-white sm:text-[48px]">
-            Trending topic of this week
+            Trending Product of this week
           </h2>
         </div>
 
