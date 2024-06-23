@@ -6,6 +6,7 @@ import React from "react";
 import MobileNav from "./MobileNav";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
+import { SocialIcon } from "react-social-icons";
 
 const Header = () => {
   const pathname = usePathname();
@@ -37,9 +38,11 @@ const Header = () => {
               );
             })}
           </ul>
-          <Button className="h-8 rounded-full !bg-[#5663FA] hover:!bg-[#1120cc]">
-            Launch App
-          </Button>
+          <div className="flex gap-3">
+            <SocialIcon url="https://twitter.com" className="!size-10" />
+            <SocialIcon url="https://whatsapp.com" className="!size-10" />
+            <SocialIcon url="https://telegram.com" className="!size-10" />
+          </div>
           <MobileNav />
         </div>
       </nav>

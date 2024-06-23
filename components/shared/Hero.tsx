@@ -1,5 +1,6 @@
 import React from "react";
-import { Button } from "../ui/button";
+import Image from "next/image";
+import ModalPopUp from "./ModalPopUp";
 
 const Hero = () => {
   return (
@@ -19,11 +20,15 @@ const Hero = () => {
             Cutting-Edge Blockchain Technology. <br /> Secure. Scalable.
             Revolutionary.
           </p>
-          <Button className="w-fit rounded-full bg-[#5663FA] px-12 py-5">
-            Submit
-          </Button>
+          <ModalPopUp />
         </div>
-        <div className="gooey mx-auto hidden w-full items-start !justify-start sm:mr-20 sm:h-[400px] sm:max-w-[400px] md:flex"></div>
+        <Image
+          src="/assets/images/heroimg.png"
+          alt="hero"
+          width={800}
+          height={800}
+          className="hidden w-full items-start !justify-start sm:mr-20 sm:h-[500px] sm:max-w-[500px] md:flex"
+        />
       </div>
       <div className="absolute right-0 top-0 hidden size-52 rounded-bl-full bg-[#3969D0] blur-3xl md:flex" />
     </>
