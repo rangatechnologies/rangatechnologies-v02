@@ -5,7 +5,7 @@ const HotBlogs = ({ hotBlogs }: any) => {
   const hotBlogsData = hotBlogs?.data?.data;
 
   return (
-    <div className="mx-auto flex max-w-[1150px] flex-wrap gap-5">
+    <div className="mx-auto grid max-w-[1150px] gap-5 lg:grid-cols-2">
       {hotBlogsData?.map((item: any) => (
         <HotBlogId key={item.id} item={item} />
       ))}
