@@ -1,16 +1,17 @@
 import Loading from "@/app/loading";
 import TrandingSlides from "@/components/shared/blogs/TrandingSlides";
-import { fetchBlogsById } from "@/lib/backend";
+import { fetchBlogsById, fetchHotBlogsById } from "@/lib/backend";
+import { Title, Description } from "@radix-ui/react-dialog";
 import Image from "next/image";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-const SingleBlog = async ({ params }: any) => {
-  const results: any = await fetchBlogsById({ id: params.id });
+const SingleHotBlog = async ({ params }: any) => {
+  const results: any = await fetchHotBlogsById({ id: params.id });
   const { attributes } = results.data.data;
 
-  const { Title, Description } = attributes;
-  const imageData = attributes.Image.data.attributes.formats;
+  const { title, description } = attributes;
+  const imageData = attributes.image.data.attributes.formats;
   const imageUrl = imageData?.small?.url;
 
   if (!attributes || !imageUrl) {
@@ -29,10 +30,10 @@ const SingleBlog = async ({ params }: any) => {
         />
         <div className="p-6">
           <h2 className="h-full pb-8 font-medium  text-[#40E9FD] sm:text-[30px]">
-            {Title}
+            {title}
           </h2>
           <div className="max-h-full overflow-auto text-[18px] font-normal text-white">
-            <ReactMarkdown>{Description}</ReactMarkdown>
+            <ReactMarkdown>{description}</ReactMarkdown>
           </div>
         </div>
       </div>
@@ -42,4 +43,4 @@ const SingleBlog = async ({ params }: any) => {
   );
 };
 
-export default SingleBlog;
+export default SingleHotBlog;

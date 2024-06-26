@@ -4,26 +4,26 @@ import Link from "next/link";
 import BlogCards from "./BlogCards";
 
 const TrendBlog = async () => {
-  const result = await TrendingBlogs(`blogs?&populate=*`);
+  const result = await TrendingBlogs();
 
   const product = result?.data?.data;
 
   const TrendingResult = product.filter(
     (item: any) => item.attributes.Trending === true
   );
-  
+
   return (
     <>
       <div className="relative z-20 mx-auto max-w-7xl px-5 pt-20 md:px-10">
         <div>
-          <h2 className="text-[30px] font-medium text-white sm:text-[48px]">
+          <h2 className="font-poppins text-[30px] font-medium text-white sm:text-[48px]">
             Unlock Investment Opportunities
           </h2>
-          <p className="text-left text-[22px] font-light text-white sm:text-[32px]">
+          <p className="text-left font-poppins text-[22px] font-extralight  text-white sm:text-[32px]">
             In Cutting-Edge Solutions
           </p>
         </div>
-        <div className="mt-10 grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-10 grid gap-x-7 sm:grid-cols-2 md:grid-cols-3">
           {TrendingResult.length > 0 ? (
             TrendingResult?.slice(0, 4)?.map((item: any) => (
               <BlogCards key={item.id} item={item} />

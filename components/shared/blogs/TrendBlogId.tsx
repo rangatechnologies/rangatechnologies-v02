@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const TrendBlogCards = ({ item }: any) => {
+const TrendBlogId = ({ item }: any) => {
   const { id, attributes } = item;
   const { Title, Description } = attributes;
   const imageData = attributes.Image.data.attributes.formats;
@@ -10,10 +10,7 @@ const TrendBlogCards = ({ item }: any) => {
 
   return (
     <>
-      <Link
-        href={`/blog/${id}`}
-        className="z-10 mx-auto my-4 max-w-[357px]  rounded-xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5"
-      >
+      <Link href={`/blog/${id}`} className="max-w-[357px] ">
         <div>
           <Image
             src={`${process.env.NEXT_PUBLIC_API_BASE_URL}${imageUrl}`}
@@ -36,4 +33,4 @@ const TrendBlogCards = ({ item }: any) => {
   );
 };
 
-export default TrendBlogCards;
+export default TrendBlogId;

@@ -1,34 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
-const TrendBlogCards = ({ item }: any) => {
+export const revalidate = 0;
+
+const HotBlogId = ({ item }: any) => {
   const { id, attributes } = item;
-  const { Title, Description } = attributes;
-  const imageData = attributes.Image.data.attributes.formats;
+  const { title, description } = attributes;
+  const imageData = attributes.image.data.attributes.formats;
   const imageUrl = imageData?.small?.url;
 
   return (
     <>
       <Link
-        href={`/blog/${id}`}
-        className="z-10 mx-auto my-4 max-w-[357px]  rounded-xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5"
+        href={`/hotblog/${id}`}
+        className="z-10 mx-auto my-4 max-w-[550px] rounded-xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5"
       >
         <div>
           <Image
             src={`${process.env.NEXT_PUBLIC_API_BASE_URL}${imageUrl}`}
             alt=""
-            width={400}
-            height={230}
-            className="h-[230px] overflow-hidden rounded-t-xl object-cover"
+            width={550}
+            height={410}
+            className="max-h-[410px] overflow-hidden rounded-t-xl object-fill"
           />
         </div>
         <div className="rounded-b-xl bg-[#020000] p-5 px-12">
           <p className="line-clamp-1 text-[18px] font-bold text-[#40E9FD]">
-            {Title}
+            {title}
           </p>
           <p className="line-clamp-2 pt-3 text-[12px] font-normal text-white">
-            {Description}
+            <ReactMarkdown>{description}</ReactMarkdown>
           </p>
         </div>
       </Link>
@@ -36,4 +39,4 @@ const TrendBlogCards = ({ item }: any) => {
   );
 };
 
-export default TrendBlogCards;
+export default HotBlogId;

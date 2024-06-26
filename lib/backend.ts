@@ -21,9 +21,42 @@ export async function fetchBlogsById({ id }: { id: string }) {
   }
 }
 
-export async function TrendingBlogs(params: string) {
+export async function TrendingBlogs() {
   try {
-    const res = await fetch(`${process.env.BACKEND}/${params}`);
+    const res = await fetch(`${process.env.BACKEND}/blogs?&populate=*`);
+    const data = await res.json();
+    return { data };
+  } catch (error) {
+    console.error(error);
+    return { error: "Fetch failed" };
+  }
+}
+
+export async function fetchServiceBlogs() {
+  try {
+    const res = await fetch(`${process.env.BACKEND}/blogs?populate=*`);
+    const data = await res.json();
+    return { data };
+  } catch (error) {
+    console.error(error);
+    return { error: "Fetch failed" };
+  }
+}
+
+export const getHotBlogs = async () => {
+  try {
+    const res = await fetch(`${process.env.BACKEND}/Hotblogs?populate=*`);
+    const data = await res.json();
+    return { data };
+  } catch (error) {
+    console.error(error);
+    return { error: "Fetch failed" };
+  }
+};
+
+export async function fetchHotBlogsById({ id }: { id: string }) {
+  try {
+    const res = await fetch(`${process.env.BACKEND}/hotblogs/${id}?populate=*`);
     const data = await res.json();
     return { data };
   } catch (error) {

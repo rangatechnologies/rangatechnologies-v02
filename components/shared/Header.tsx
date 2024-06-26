@@ -4,15 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import MobileNav from "./MobileNav";
-import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
-import { SocialIcon } from "react-social-icons";
 
 const Header = () => {
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-50 bg-[#020000]">
-      <nav className="mx-auto flex max-w-7xl  items-center justify-around px-5 py-3 md:px-10">
+      <nav className="mx-auto flex max-w-[1130px]  items-center justify-around px-5 py-3 md:px-5">
         <div className="flex-1">
           <Link href="/">
             <Image
@@ -31,7 +29,7 @@ const Header = () => {
                 <Link
                   href={link.path}
                   key={link._id}
-                  className={`text-white ${activeLink && "text-lg font-bold !text-[#C43EDB]"}`}
+                  className={`text-white ${activeLink && " text-lg !text-[#C43EDB] underline underline-offset-8"}`}
                 >
                   {link.title}
                 </Link>

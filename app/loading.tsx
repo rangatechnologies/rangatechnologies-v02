@@ -1,8 +1,7 @@
 import React from "react";
-import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 
-const loading = () => {
+const Loading = () => {
   return (
     <div className="mx-auto mt-40 flex w-full items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-4">
@@ -21,4 +20,4 @@ const loading = () => {
   );
 };
 
-export default loading;
+export default Loading;

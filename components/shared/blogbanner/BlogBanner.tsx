@@ -48,22 +48,22 @@ const BlogBanner = ({ id, title, description, image }: any) => {
             />
             <div className="p-8">
               <div>
-                <h2 className="pb-8 font-medium text-[#40E9FD] sm:text-[30px]">
+                <h2 className="pb-8 font-bold text-[#5663FA] sm:text-[20px]">
                   {title}
                 </h2>
-                <p className=" max-h-[800px] overflow-auto text-[18px] font-normal text-white">
+                <p className=" max-h-[800px] overflow-auto text-[18px] font-[300] text-white">
                   {truncateDescription}
                 </p>
               </div>
               <div className="mt-10 flex items-center justify-between">
                 <Link
                   href={`/blog/${id}`}
-                  className="text-[16px] font-medium text-purple-700"
+                  className="text-[16px] font-medium text-[#5663FA]"
                 >
                   Read More
                 </Link>
                 <Button
-                  className="bg-purple-700 hover:bg-purple-800"
+                  className="h-9 rounded-full bg-[#5663FA] hover:bg-[#D243FA] active:bg-[#B529DC]"
                   onClick={handleButtonClick}
                 >
                   Buy Now

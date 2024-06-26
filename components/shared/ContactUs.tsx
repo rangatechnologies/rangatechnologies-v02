@@ -39,7 +39,7 @@ const ContactUs = () => {
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="w-full max-w-2xl space-y-2"
+                className="w-full max-w-xl space-y-2"
               >
                 <FormField
                   control={form.control}
@@ -103,20 +103,20 @@ const ContactUs = () => {
                 />
                 <Button
                   type="submit"
-                  className="!mt-10 flex rounded-full bg-gradient-to-r from-[#D243FA] to-[#542CB1] px-10 hover:bg-gradient-to-l"
+                  className="!mt-10 h-9 rounded-full bg-[#5663FA] hover:bg-[#D243FA] active:bg-[#B529DC]"
                 >
                   Submit
                 </Button>
               </form>
             </Form>
           </div>
-          {/* <div className="gooey mx-auto hidden !size-[400px] !max-h-[300px] items-center justify-center sm:flex"></div> */}
+
           <Image
-            src="/assets/images/heroimg.png"
+            src="/assets/images/formImg.png"
             alt="hero"
-            width={800}
-            height={800}
-            className="mx-auto hidden !size-[400px] !max-h-[300px] items-center justify-center sm:flex"
+            width={527}
+            height={416}
+            className="mx-auto hidden h-[416px] w-[527px] items-center justify-center sm:flex"
           />
         </div>
       </div>
