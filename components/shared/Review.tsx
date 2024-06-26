@@ -72,7 +72,7 @@ const Review = () => {
     return (
       <Image
         key={index}
-        src="/assets/images/star.png"
+        src="/assets/images/Star.png"
         alt="star"
         width={18}
         height={18}
