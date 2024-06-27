@@ -110,7 +110,7 @@ const Review = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="relative flex h-12 items-center justify-center">
+          <div className="relative hidden h-12 items-center justify-center sm:flex">
             <CarouselPrevious className="absolute left-[46%] border-white bg-[#332E32] text-white hover:bg-none" />
             <CarouselNext className="absolute right-[46%] border-white bg-[#332E32] text-white" />
           </div>

@@ -32,7 +32,7 @@ const ContactUs = () => {
   }
   return (
     <>
-      <div className="mx-auto mt-10 max-w-7xl px-5 md:px-10">
+      <div className="mx-auto mt-10 max-w-7xl px-5 pb-10 sm:pb-3 md:px-10">
         <h2 className="text-[48px] font-medium text-white">Contact us! </h2>
         <div className="mx-auto mt-10 flex items-center justify-between gap-5">
           <div className="flex w-full ">

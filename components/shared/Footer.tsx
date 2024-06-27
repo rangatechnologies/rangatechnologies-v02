@@ -74,7 +74,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="flex flex-col items-center self-stretch bg-[#1a1a1a]  px-16 pb-14 pt-12 max-md:px-5">
+    <footer className="flex flex-col items-center self-stretch bg-[#1a1a1a] px-16  pb-14 pt-12 max-md:px-5">
       <div className="w-full max-w-[1130px] justify-between px-10">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0">
           <section className="flex w-6/12 flex-col max-md:ml-0 max-md:w-full">
