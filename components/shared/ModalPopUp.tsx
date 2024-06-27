@@ -15,7 +15,7 @@ import { SocialIcon } from "react-social-icons";
 const ModalPopUp = () => {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="z-40 h-9 w-[126px] rounded-full bg-[#5663FA] text-[16px] font-[200] font-medium text-white hover:bg-[#D243FA] active:bg-[#B529DC]">
+      <AlertDialogTrigger className="z-40 h-9 w-[126px] rounded-full bg-[#5663FA] text-[16px] font-medium text-white hover:bg-[#D243FA] active:bg-[#B529DC]">
         Contact Us
       </AlertDialogTrigger>
       <AlertDialogContent className="border-purple-500 bg-black">
