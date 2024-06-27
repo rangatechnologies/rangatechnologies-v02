@@ -32,7 +32,9 @@ const SingleBlog = async ({ params }: any) => {
             {Title}
           </h2>
           <div className="max-h-full overflow-auto text-[18px] font-normal text-white">
-            <ReactMarkdown>{Description}</ReactMarkdown>
+            <ReactMarkdown className="prose max-w-full text-white">
+              {Description}
+            </ReactMarkdown>
           </div>
         </div>
       </div>
