@@ -53,7 +53,7 @@ const ContactUs = () => {
                         <Input
                           placeholder="Enter Your Name"
                           {...field}
-                          className="bg-black"
+                          className="bg-black outline-none"
                         />
                       </FormControl>
                       <FormMessage />

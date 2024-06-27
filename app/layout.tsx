@@ -29,9 +29,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex-1 bg-[#020000]">{children}</main>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </body>
     </html>
   );
