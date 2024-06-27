@@ -28,7 +28,7 @@ const BlogsItem = ({ blogs, hotBlogs }: any) => {
 
   return (
     <div className="mx-auto max-w-[1150px] px-5 md:px-10">
-      <div className="flex flex-wrap justify-between gap-4 space-x-4 py-4">
+      <div className="flex flex-wrap justify-center gap-4 space-x-4 py-4 sm:justify-between">
         {categories.map((category) => (
           <button
             key={category}

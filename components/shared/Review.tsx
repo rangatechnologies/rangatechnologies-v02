@@ -100,7 +100,7 @@ const Review = () => {
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className="z-40 w-full grid-cols-3">
+          <CarouselContent className="z-40 mx-auto  w-full lg:grid-cols-3">
             {tempReviews.map((review) => (
               <CarouselItem
                 key={review._id}

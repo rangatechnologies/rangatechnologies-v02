@@ -1,14 +1,21 @@
-import React from "react";
+"use client";
+import { useState, useEffect } from "react";
 import HotBlogId from "./HotBlogId";
 
 const HotBlogs = ({ hotBlogs }: any) => {
+  const [isClient, setIsClient] = useState(false);
   const hotBlogsData = hotBlogs?.data?.data;
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <div className="mx-auto grid max-w-[1150px] gap-5 lg:grid-cols-2">
-      {hotBlogsData?.map((item: any) => (
-        <HotBlogId key={item.id} item={item} />
-      ))}
+      {isClient &&
+        hotBlogsData?.map((item: any) => (
+          <HotBlogId key={item.id} item={item} />
+        ))}
     </div>
   );
 };
